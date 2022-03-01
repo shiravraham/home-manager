@@ -6,7 +6,6 @@ connectDB();
 
 app.use(express.json({ extended: false }));
 
-// app.get("/", (req, res) => res.send("shirkabuli"));
 app.use("/api/records", require("./routes/api/records"));
 
 const PORT = process.env.PORT || 5000;
