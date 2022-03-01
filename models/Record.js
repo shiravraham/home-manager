@@ -2,23 +2,26 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const RecordSchema = new Schema({
+  date: {
+    type: Date,
+  },
   description: {
-    type: Schema.Types.ObjectId,
-    ref: "user",
+    type: String,
   },
   category: {
     type: String,
-    required: true,
   },
   cost: {
+    type: Number,
+  },
+  currency: {
     type: String,
   },
-  paid: {
+  shir_avraham: {
     type: String,
   },
-  date: {
-    type: Date,
-    default: Date.now,
+  shaked_hadas: {
+    type: String,
   },
 });
 
