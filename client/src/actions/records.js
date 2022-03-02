@@ -17,7 +17,12 @@ export const addRecords = (records) => async (dispatch) => {
 
     dispatch({
       type: ADD_RECORDS,
-      payload: res.data,
+      payload: res.data.map((record) => {
+        return {
+          key: record._id,
+          ...record,
+        };
+      }),
     });
   } catch (error) {
     console.log("adding records error", error);

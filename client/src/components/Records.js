@@ -5,9 +5,6 @@ import _ from "lodash";
 const Records = (props) => {
   const { records } = props;
 
-  // TODO: fix:
-  records.pop();
-
   const categories = _.groupBy(records, (record) => record.category);
   const columns = [
     {

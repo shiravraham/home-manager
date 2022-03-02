@@ -14,12 +14,7 @@ const App = () => {
   const data = useSelector((state) => state.records.records);
 
   const onFileLoaded = (data) => {
-    const aggregatedData = data.map((record, index) => ({
-      key: index,
-      ...record,
-    }));
-
-    store.dispatch(addRecords(aggregatedData));
+    store.dispatch(addRecords(data));
   };
 
   return (
