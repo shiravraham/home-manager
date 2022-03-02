@@ -1,0 +1,2 @@
+export const ADD_RECORDS = "ADD_RECORDS";
+export const ADD_RECORDS_FAIL = "ADD_RECORDS_FAIL";
